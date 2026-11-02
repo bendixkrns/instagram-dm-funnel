@@ -70,7 +70,15 @@ Bisher kennt der Bot nur Beiträge, die das alte Projekt selbst angelegt hat (Or
 - **Einmal-Test:** Ist `.secrets/automation/instagram_keyword_test.json` vorhanden, gilt ein TEST-Modus, der alle anderen Kommentare ignoriert (`testkonfiguration()`). Der Name `testlaeufe` im Zustand ist historisch und steht für **alle** Flows, nicht nur Tests.
 - Tests in `tests/bots/test_bots.py` entsprechend anpassen (sie patchen `eigene_reels`, `REELS` usw.).
 
-### C. Oberfläche auf den DM-Funnel reduzieren und absichern (nötig)
+### C0. Zuerst den Nutzer fragen: Wo soll die Oberfläche leben?
+Bei der Arbeit gibt es schon ein eigenes Content-Erstellungstool, mit dem Posts gemacht werden. **Frag den Nutzer, bevor du an der Oberfläche arbeitest**, ob die DM-Funnel-Einstellungen dort eingebaut werden sollen, statt als eigenes Cockpit zu laufen. Zwei Wege:
+
+- **Einbauen ins vorhandene Tool:** Das Tool bekommt eine Funnel-Seite oder einen Funnel-Bereich direkt am Post (Keywords, Link, Ablauf, Texte, aktiv ja/nein). Es spricht mit dem Bot über eine kleine API. Die vorhandenen Routen `GET/POST /api/dm-funnel`, `/api/dm-funnel/default`, `/api/dm-funnel/reel/<id>`, `/api/dm-funnel/reset/<id>` in `cockpit/server.py` und die Validierung in `keyword_config.py` sind dafür die Vorlage. Alternativ schreibt das Tool direkt in `keyword_funnels.json`, wenn es auf demselben Server läuft. Die UI-Logik und die Live-Vorschau aus `keywordFunnelSeite()` in `cockpit/app.js` können übernommen werden. Vorteil: Funnel-Einstellung und Post entstehen am selben Ort. Wenn das Tool die Instagram-Media-ID nach dem Posten kennt (über Postiz oder die API), lässt sich der Funnel gleich an den richtigen Beitrag hängen. Erst den Aufbau des Tools ansehen (Sprache, Framework, wo es läuft, Login), dann entscheiden.
+- **Eigenständig lassen:** Dann gilt Abschnitt C.
+
+Der Bot selbst (Worker, Webhook) bleibt in beiden Fällen gleich und läuft auf dem VPS.
+
+### C. Oberfläche auf den DM-Funnel reduzieren und absichern (wenn eigenständig)
 - Aus dem Cockpit nur die DM-Funnel-Seite behalten: Navigation, Pipeline, Themen, Wissen, Bibliothek, Kalender, Kommentare und DMs entfernen, `#/dm-funnel` als Startseite. Server-Routen entsprechend kürzen. Die Hintergrundschleifen in `server.py` (`kennzahlen_schleife`, `warteschlange_schleife`, ganz unten) entfernen. Die Warteschlange würde sonst posten, und das macht Postiz.
 - **Das Cockpit hat keinen Login.** Es lauscht auf `127.0.0.1:5090`. Auf dem VPS hinter Caddy mit `basic_auth` (oder dem Firmen-SSO) über HTTPS stellen und nie offen ins Netz. Alternativ nur per SSH-Tunnel (`ssh -L 5090:127.0.0.1:5090 user@vps`). Kein `--lan`.
 - Die Vorschau zeigt ein Profilbild aus `gedaechtnis/Kanal/marke/profilbild.png`. Stattdessen `profile_picture_url` von `GET /me` verwenden oder das Bild dort ablegen.
@@ -89,6 +97,7 @@ Die Schritt-für-Schritt-Anleitung steht in `deploy/vps/README.md`. Kurz:
 7. Erst `--modus probelauf --trocken` testen: `python -X utf8 tools/automation/run.py keyword_dm --modus probelauf --trocken`. Das sendet und speichert nichts. Danach `kanal.json → kommentar_bot.modus` auf `live` stellen, **aber nur nach Freigabe durch den Nutzer**. Der Worker startet den Job selbst mit `--modus live`, deshalb den Dienst erst nach der Freigabe aktivieren.
 
 ### E. Klären mit dem Nutzer
+- **Oberfläche ins vorhandene Content-Erstellungstool einbauen oder eigenständig lassen?** (siehe C0, zuerst fragen)
 - Funnel-Texte (Standard ist Englisch), Keywords, Links, Ablauf-Modus.
 - E-Mail-Abfrage und DSGVO: Hinweis im Text, Zweck, Löschung. Die Adressen gelten nicht als Newsletter-Einwilligung. Für Löschanfragen gibt es `instagram_contacts.delete_email()`.
 - Ob der Funnel unter allen Beiträgen oder nur unter ausgewählten läuft.
