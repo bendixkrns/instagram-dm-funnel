@@ -1,0 +1,24 @@
+{
+ "default": {
+  "mode": "adaptive",
+  "intro_text": "Thanks for commenting! 👏\nTap on the button and I will send you the link 🔥\n\nOn desktop? Reply SEND LINK.",
+  "follow_text": "Sorry, this resource is only for my followers. \nFollow me, then tap I followed ✅ or reply I followed ✅ here, and I'll send you the link 🤝",
+  "follow_again_text": "You're not following me yet.",
+  "email_text": "Sorry, I need your email address for this resource. Reply with your email here, and I'll send you the link. 📩",
+  "email_again_text": "Please reply with a valid email address.",
+  "link_text": "Thanks! Here is your link: {link}",
+  "start_button": "Send link",
+  "follow_button": "I followed ✅",
+  "follow_now_button": "Follow Now",
+  "public_replies": [
+   "Sent you a message. Check your DMs 📩",
+   "Just sent it over. Check your DMs",
+   "It's in your DMs now 📩",
+   "Sent! Take a look in your DMs",
+   "Your message is on its way 📩",
+   "Check your DMs — it's there"
+  ],
+  "link": "https://example.com/ressource"
+ },
+ "reels": {}
+}

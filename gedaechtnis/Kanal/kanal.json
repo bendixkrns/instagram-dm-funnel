@@ -1,0 +1,119 @@
+{
+ "_doc": "Kanal-Profil – Single Source of Truth für alle Agenten. Felder mit OFFEN werden gemeinsam mit dem Nutzer festgelegt; bis dahin Platzhalter nutzen und nichts erfinden.",
+ "name": "FIRMA",
+ "handle": "FIRMA_HANDLE",
+ "sprache": "en-US",
+ "nische": "Alltagspsychologie (Hidden Psychology): Mechanismen, die dich unbemerkt steuern, und was du dagegen tun kannst",
+ "zielgruppe": "Englischsprachige Berufstätige, ca. 22–40 (Nutzer 2026-10-22: Mix aus b+e+g): leben im Alltag auf Autopilot und wollen die Kontrolle zurück, wollen mehr aus ihrer Zeit machen (Fokus, Routinen, Aufschieben) und weniger am Handy hängen. Beispiele aus ihrer Welt: Job, Meetings, Feierabend auf der Couch, Abos, Scrollen im Bett, Vorsätze, die nicht halten.",
+ "ton": "zum Nachdenken und Nachmachen anregend statt empört; erklären, nicht moralisieren; locker, klug, nie belehrend",
+ "eigene_sprache": "OFFEN",
+ "schlusssatz": "KEINER – Nutzer 2026-10-22: kein Markensatz und kein Marken-Endbild am Videoende",
+ "saeulen": [
+  {
+   "id": "phone",
+   "name": "Phone & Attention",
+   "inhalt": "Scrollen, Likes, Benachrichtigungen, Vergleichen, Apps"
+  },
+  {
+   "id": "money",
+   "name": "Money & Buying",
+   "inhalt": "Lockangebote, Knappheit, Abos, Preise, Lifestyle-Inflation"
+  },
+  {
+   "id": "mind",
+   "name": "Mind Traps",
+   "inhalt": "Denkfehler und Entscheidungen (Sunk Cost, Anchoring, Voreinstellungen …)"
+  },
+  {
+   "id": "habits",
+   "name": "Habits, Time & Work",
+   "inhalt": "Vorsätze, Umgebung, Aufschieben, Multitasking, Leben auf Autopilot"
+  },
+  {
+   "id": "people",
+   "name": "People & Persuasion",
+   "inhalt": "Freundschaft, Wirkung, Gruppen, Cialdini, Carnegie – erkennen und fair nutzen, keine Manipulations-Anleitung"
+  },
+  {
+   "id": "self",
+   "name": "Self & Emotions",
+   "inhalt": "Hochstapler-Gefühl, innerer Kritiker, Bestätigung, Erinnerung"
+  }
+ ],
+ "plattformen": {
+  "aktiv": [
+   "instagram"
+  ],
+  "spaeter": [],
+  "vorerst_nicht": [
+   "facebook"
+  ],
+  "_hinweis": "Nutzer 2026-10-22: Facebook vorerst nicht – nicht die Zielgruppe"
+ },
+ "format": {
+  "stil": "thepsychnote",
+  "kit": "Formate/thepsychnote/kit",
+  "aufloesung": [
+   1080,
+   1920
+  ],
+  "fps": 30,
+  "laenge_s": [
+   45,
+   60
+  ],
+  "tempo_referenz": "gedaechtnis/Kanal/Stil.md (2026-10-24; Kleinecke-Rhythmus mit mehr Luft)"
+ },
+ "ende": {
+  "payoff_pflicht": true,
+  "bausteine": [
+   "question",
+   "save",
+   "follow",
+   "share",
+   "none"
+  ],
+  "regel": "Video endet mit dem Payoff; danach höchstens der Baustein (Frage/CTA) als Karte ohne Marke (Kit: ending mit marke=false). Bei none kein End-Shot. Anfangs vor allem question und save; später mehr follow/CTA – Mix nach Zahlen (Learnings.md)",
+  "marke": false
+ },
+ "takt": {
+  "videos_pro_woche": 3,
+  "postzeit": "19:00",
+  "zeitzone": "Europe/Berlin",
+  "_hinweis": "im Test durch Free-Credits begrenzt (~9 Videos/Monat)"
+ },
+ "theme": {
+  "accent": "#c72b80",
+  "paper": "#f6f2f3",
+  "ink": "#0a0a0c",
+  "gradient": [
+   "#ffe1ef",
+   "#f5a6cb",
+   "#c72b80"
+  ],
+  "brand": "",
+  "mark": "◆",
+  "_hinweis": "Video-CI seit 2026-10-24: Kleinecke-inspirierte Palette in Pink statt Referenz-Orange; ältere Reels und bestehende Profil-Assets mit Indigo sind Bestandsmaterial."
+ },
+ "sperrzonen": "instagram",
+ "ki_kennzeichnung": "Instagram-Label „KI-Info“ beim Upload setzen, sobald realistische KI-Bilder von Menschen/Orten vorkommen – kein KI-Hinweis als Caption-Text",
+ "nennung": "keine – Nutzer 2026-10-22: kein ElevenLabs-Hinweis in der Caption (bewusst trotz Free-Plan-Bedingung)",
+ "material": "Eigenes, Google Flow, CC0, Pixabay, Pexels ohne Nachweis. Lizenzpflichtige Bilder (z. B. CC BY) erlaubt: Nachweis steht im Bibliothekseintrag (`credit`, Englisch) und wird vom Kit automatisch klein unten links im Shot eingeblendet – nicht in der Caption.",
+ "kommentar_bot": {
+  "modus": "probelauf",
+  "_hinweis": "probelauf = nur protokollieren, live = sendet. Erst nach Freigabe auf live stellen."
+ },
+ "_name_hinweis": "Nutzer 2026-10-22: Handle @thepsychnote, Schreibweise „The PsychNote“ (großes N, „The“ getrennt) – gilt überall (Banner, Anzeigename, Bio).",
+ "profil": {
+  "bild": "gedaechtnis/Kanal/marke/profilbild.png (Gehirn A4 auf #5B4FE0, ohne Name) – Nutzer 2026-10-22; Banner: marke/youtube_banner.png",
+  "bio": "Your brain runs on autopilot. 🧠\nThese notes help you take the wheel back. 📝\nEveryday psychology in 60 seconds. 💡",
+  "accounts": {
+   "instagram": "https://www.instagram.com/thepsychnote/",
+   "tiktok": "https://www.tiktok.com/@thepsychnote",
+   "youtube": "https://www.youtube.com/@thepsychnote"
+  },
+  "bio_tiktok": "Your brain runs on autopilot. 🧠 Take the wheel back. 💡",
+  "youtube_beschreibung": "💡 Hi, we're The PsychNote. We make short videos about the hidden psychology behind everyday life – why you reach for your phone without thinking, why \"later\" never comes, why a sale works on you, and how to take back control.\n\nTopics: phone & attention, money & buying, mind traps and cognitive biases, habits & procrastination, people & persuasion, self & emotions.\n\nBased on research, explained without jargon.",
+  "_bio_hinweis": "Instagram-Bio vom Nutzer gesetzt 2026-10-22 (Emojis am Zeilenende)"
+ }
+}

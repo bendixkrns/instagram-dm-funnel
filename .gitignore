@@ -1,0 +1,17 @@
+# Schlüssel und private Daten
+.env
+.secrets/
+
+# Zustand des Bots (entsteht im Betrieb, nicht ins Git)
+gedaechtnis/Kanal/keyword_dms.json
+gedaechtnis/Kanal/kommentare.json
+gedaechtnis/Kanal/dms.json
+gedaechtnis/Kanal/bot_status.json
+gedaechtnis/Kanal/*.lock
+gedaechtnis/Kennzahlen/
+reels/
+
+__pycache__/
+.pytest_cache/
+.venv/
+tmp/

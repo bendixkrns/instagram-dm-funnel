@@ -1,0 +1,17 @@
+[Unit]
+Description=Reply bot: Instagram webhook and comment/DM worker
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=replybot
+WorkingDirectory=/opt/replybot
+EnvironmentFile=/opt/replybot/.env
+ExecStart=/opt/replybot/.venv/bin/python -X utf8 tools/automation/instagram_webhook.py --worker
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

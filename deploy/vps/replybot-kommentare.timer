@@ -1,0 +1,10 @@
+[Unit]
+Description=Check comments every 15 minutes
+
+[Timer]
+OnCalendar=*:0/15
+Persistent=true
+Unit=replybot@kommentare.service
+
+[Install]
+WantedBy=timers.target

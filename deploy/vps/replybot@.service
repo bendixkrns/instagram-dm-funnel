@@ -1,0 +1,14 @@
+[Unit]
+Description=Reply bot job (comments and DMs) %i
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=replybot
+WorkingDirectory=/opt/replybot
+EnvironmentFile=/opt/replybot/.env
+ExecStart=/opt/replybot/.venv/bin/python -X utf8 tools/automation/run.py %i
+TimeoutStartSec=20min
+NoNewPrivileges=true
+

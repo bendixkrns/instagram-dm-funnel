@@ -1,0 +1,13 @@
+{
+ "_doc": "Konten-Register (ohne Geheimnisse). Jedes Konto hat eine id; die Schlüssel stehen in der .env als INSTAGRAM_<ID>_ACCESS_TOKEN und INSTAGRAM_<ID>_USER_ID (ID in Großbuchstaben, Sonderzeichen als _). Erneuerte Tokens liegen in .secrets/instagram_tokens.json (nicht im Git). Ein Reel gehört über status.json → konto zu einem Konto, ohne Eintrag gilt „standard“. Neues Konto: Eintrag hier + Zeilen in .env + `python tools/instagram/tokens.py pruefen --konto <id>`. YouTube-Konten (plattform: youtube): OAuth-Client in der .env (YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET, gelten für alle YouTube-Konten), Refresh-Token je Konto in .secrets/youtube_tokens.json (erzeugt `python tools/youtube/youtube.py autorisieren`). TikTok-Konten (plattform: tiktok) laufen über Zernio: ZERNIO_API_KEY in der .env, zernio_account_id hier (trägt `python tools/tiktok/tiktok.py konten` ein).",
+ "standard": "firma",
+ "konten": [
+  {
+   "id": "firma",
+   "plattform": "instagram",
+   "handle": "FIRMA_HANDLE",
+   "anzeigename": "FIRMA",
+   "aktiv": true
+  }
+ ]
+}
