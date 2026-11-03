@@ -1,6 +1,6 @@
 # Instagram Keyword-DM-Funnel (Übergabe an Claude)
 
-**An Claude, der dieses Repo bekommt:** Lies diese Datei zuerst ganz. Sie erklärt, was der Code tut, welche Dateien wichtig sind und was du einrichten und anpassen sollst. Der Code stammt aus einem privaten Projekt des Nutzers (Kanal „The PsychNote“) und läuft dort: Der Funnel wurde live auf Instagram getestet, und die 36 Tests sind grün. Er soll jetzt bei der Firma des Nutzers rund um die Uhr auf einem VPS laufen.
+**An Claude, der dieses Repo bekommt:** Lies diese Datei zuerst ganz. Sie erklärt, was der Code tut, welche Dateien wichtig sind und was du einrichten und anpassen sollst. Der Code stammt aus einem privaten Projekt des Nutzers und läuft dort: Der Funnel wurde live auf Instagram getestet, und die 36 Tests sind grün. Er soll jetzt bei der Firma des Nutzers rund um die Uhr auf einem VPS laufen.
 
 ## 1. Worum es geht
 
